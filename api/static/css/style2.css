@@ -1,0 +1,92 @@
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+    cursor: pointer;
+    margin-left: -8%;
+    margin-bottom: -1%;
+    padding: 1px;
+/*
+    position: relative;
+    border: 1px solid #fff;
+    margin: 1px;
+    cursor: pointer;
+    margin-top: 1%;
+    padding:10px;
+    */
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  border-radius: 50%;
+  /*border: 1px solid grey;*/
+  top: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 18px;
+  z-index: -1;
+  /*
+  transition-duration: 0.4s;
+  transform: scale(0);
+  */
+}
+
+label img {
+  height: 40px;
+  width: 40px;
+  z-index: 20;
+  /*
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  */
+}
+
+label span {
+    display: none;
+    position: absolute;
+    left: 52%;
+    top: 40%;
+    right: 0;
+    background: #333;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 1;
+}
+
+label:hover span {display: block; }
+
+
+:checked + label {
+    /*margin-left: 1%;*/
+    border-color: #33B2FF;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: #33B2FF;
+  /*transform: scale(1);*/
+}
+
+:checked + label img {
+/*
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+  */
+}
+
+
+.search_lmr_engine {
+    width: 40px;
+    margin-left: 0%;
+    margin-bottom: -1%;
+    z-index: 10;
+}

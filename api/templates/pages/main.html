@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  <title>DIE - Main</title>
+  
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/fav/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/fav/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/fav/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/fav/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/fav/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/fav/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/fav/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/fav/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/fav/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='images/fav/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/fav/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/fav/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/fav/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/fav/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/fav/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style3.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style4.css') }}">
+  
+</head>
+
+<body>
+
+  <div class="cotn_principal">
+<!--      <img class="logo" style="float:left; z-index:10" src="{{ url_for('static', filename='images/Hughes_Systique_Corporation_logo.png') }}">-->
+      <img class="logo" style="float:right; height:15%; width:15%;" src="{{ url_for('static', filename='images/DIE_logo.png') }}">
+      <table style="z-index:10; position:relative; left:5%; width:20%">
+            <tr>
+<!--                <td><a href="{{ url_for('main') }}">MAIN</a> </td>-->
+                <td><a href="{{ url_for('report') }}" target="_blank">LOGS</a> </td>
+                <td><a href="{{ url_for('readme') }}" target="_blank">READ ME</a> </td>
+            </tr>
+        </table>
+<div class="cont_centrar">
+
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>PREDICTIONS</h2>
+  <p>Make predictions with pretrained models</p>
+  <button class="btn_login" onclick="cambiar_login()">ENTER</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>TRAIN MODEL</h2>
+
+  
+  <p>Train your own model with your dataset.</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">ENTER</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="{{ url_for('static', filename='images/math.jpg') }}" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="{{ url_for('static', filename='images/blueprint.jpg') }}" alt="" />
+       </div>
+
+     <form action="{{ url_for('main') }}" method="post">
+         <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>Predictions</h2>
+         <input type="text" name="text" placeholder="Your Text Here!" />
+        <label for="model">Choose a model:</label>
+
+        <select name="model" id="model">
+
+            <option value="bert">BERT</option>
+            <option value="deberta">DEBERTA</option>
+            <option value="bert_posam">BERT+POSAM</option>
+            <option value="deberta_posam">DEBERTA+POSAM</option>
+            <option value="mdm">MDM</option>
+            <option value="vsm">VSM</option>
+            <option value="mdm_posam">MDM+POSAM</option>
+            <option value="vsm_posam">VSM+POSAM</option>
+
+        </select>
+<!--             <label for="posam">Does Your model is with posam</label>-->
+<!--             <input type="checkbox" name="is_posam" id="posam" value="posam" style="height: 25px; width: 25px; background-color: aqua;">-->
+<!--        <input type="password" placeholder="Password" />-->
+        <button type="submit" class="btn_login" onclick="cambiar_login(); processAlert()">PREDICT</button>
+             </div>
+     </form>
+
+
+  
+   <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>FILL PARAMETERS FOR TRAINING</h2>
+       <P>Warning: Please ensures the files are placed.</P>
+       <form action="{{ url_for('training') }}" method="post">
+           <label for="model">Choose a model:</label>
+
+            <select name="model" id="model">
+
+                <option value="bert">BERT</option>
+                <option value="deberta">DEBERTA</option>
+                <option value="bert_with_posam">BERT+POSAM</option>
+                <option value="deberta_with_posam">DEBERTA+POSAM</option>
+                <option value="mdm">MDM</option>
+                <option value="vsm">VSM</option>
+                <option value="mdm_with_posam">MDM+POSAM</option>
+                <option value="vsm_with_posam">VSM+POSAM</option>
+
+            </select>
+            <P></P>
+           <label for="target">Target Class in your Dataset</label>
+           <P></P>
+            <input name="target" id="target" type="text" placeholder="Target Class" />
+            <P></P>
+<!--           <label for="learning_rate">Fill your learning rate or leave it blank for default.</label>-->
+<!--           <P></P>-->
+<!--            <input name="learning_rate" id="learning_rate" type="text" placeholder="Learning Rate" />-->
+<!--           <P></P>-->
+<!--           <input type="checkbox" name="training_type" value="aggrassive_training"><span>Aggressive Training</span>-->
+<!--            <input type="text" placeholder="User" />-->
+<!--            <input type="password" placeholder="Password" />-->
+<!--            <input type="password" placeholder="Confirm Password" />-->
+            <button type="submit" class="btn_sign_up" onclick="cambiar_sign_up(); onclick=processAlert()">START TRAINING</button>
+       </form>
+
+  </div>
+
+    </div>
+    
+  </div>
+
+
+</div>
+       <div id="loading"></div>
+</div>
+  
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();
+        }
+// ]]></script>
+<script>
+function processAlert() {
+  alert("Please go readme first to know how to place & check the right model. This process may take time depending on your machine type, so be patience.!");
+}
+</script>
+
+</body>
+</html>

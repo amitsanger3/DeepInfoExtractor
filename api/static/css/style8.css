@@ -1,0 +1,15 @@
+  /* for readme */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  margin_left: 10%;
+  margin_right:10%;
+}
+
+.main {
+  /**/
+}

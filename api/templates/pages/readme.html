@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIE - Read me</title>
+       <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/fav/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/fav/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/fav/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/fav/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/fav/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/fav/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/fav/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/fav/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/fav/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='images/fav/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/fav/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/fav/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/fav/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/fav/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/fav/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style3.css') }}">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style8.css') }}">
+</head>
+<body>
+<p>* Return to MAIN page.<br />
+      OR</br>
+  ** Send us an e-mail <i>amitsanger1988@gmail.com</i> about this error and try later.</p>
+  <nav>
+    <a href="{{ url_for('main') }}" class="link">Main</a>&nbsp
+  </nav>
+
+    <h1>DIE</h1>
+<h2>DEEP INFO EXTRACTOR</h2>
+<p>
+    <b>Deep Info Extractor (DIE)</b> is an open-source tool that can extract useful information from micro text. Name
+    Entity Recognition is an example of an information extraction task and DIE can extract such information but taking
+    one task at a time, i.e. tool can extract either name or entity, or location at a time. DIE tool can be trained on
+    any labeled data that is in <a href="https://paperswithcode.com/dataset/conll-2003" target="_blank">Conl2003</a>
+    format & provide 2 pre trained & 6 novel pre-processing embedding methods to choose from. The tool can be used with
+    or without docker. Docker helps you to relax from the environment variations.
+</p>
+<h3>GETTING STARTED</h3>
+<p><b>Video Tutorial:</b><a href="" target="_blank">youtube</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JG39guq4QdE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+<h3>INSTALLATION</h3>
+<h4>With Docker:</h4>
+<p>The best way to use DIE is with Docker, as with docker you get environment ready built without the worry of
+    dependencies.</p>
+<p><i>install docker</i></p>
+<p><i>initialize docker</i></p>
+<p><i>docker pull die:version</i></p>
+<h3>Without Docker:</h3>
+<p>Create a virtual environment and install the requirements with pip. Here are the steps:</p>
+<p><i>pip install -r lmr_requirements.txt</i></p>
+<p><i>cd /project_dir/ python api_run.py</i></p>
+
+
+</body>
+</html>
