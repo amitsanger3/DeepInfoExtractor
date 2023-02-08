@@ -27,12 +27,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style8.css') }}">
 </head>
 <body>
-<p>* Return to MAIN page.<br />
-      OR</br>
-  ** Send us an e-mail <i>amitsanger1988@gmail.com</i> about this error and try later.</p>
-  <nav>
-    <a href="{{ url_for('main') }}" class="link">Main</a>&nbsp
-  </nav>
+<p>      * Return to <a href="{{ url_for('main') }}" class="link">Main</a> page.       </p>
+<p>                                          OR                                        </p>
+<p>** Send us an e-mail <i>amitsanger1988@gmail.com</i> about this error and try later.</p>
+<P>************************************************************************************</P>
 
     <h1>DIE</h1>
 <h2>DEEP INFO EXTRACTOR</h2>
@@ -50,17 +48,356 @@
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+
+
+<h3>Download Dependencies & Trained Weights</h3>
+<P>To run this project, you will need to download the DIE directory from the
+    <a href="https://drive.google.com/drive/folders/1I6idw9pASneTJ5BPyD0cq6nNZ3YxXQnC?usp=sharing" target="_blank">google drive</a>.</P>
+
+<table>
+    <thead>
+        <h4>Structure of the DIE directory</h4>
+    </thead>
+    <tr>
+        <td><b>DIE</b></td>
+        <td colspan="5"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>|-- <b>Pre-Trained Embedding Model</b></td>
+        <td colspan="4"></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>|-- bert-base-multilingual-cased</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>|-- deberta-base</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>|-- pos_tagger</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>|-- <b>Trained Weights</b></td>
+        <td colspan="4"></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>|-- Conll2003_Location</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+        <td>|-- Conell</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert_posam</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm_posam</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+<!--    Conll2003_Organisation-->
+     <tr>
+        <td colspan="2"></td>
+        <td>|-- Conll2003_Organisation</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+        <td>|-- Conell</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert_posam</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm_posam</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+<!--    Conll2003_Person-->
+     <tr>
+        <td colspan="2"></td>
+        <td>|-- Conll2003_Person</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+        <td>|-- Conell</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- bert_posam</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta</td>
+        <td></td>
+    </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- deberta_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- mdm_posam</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+    <tr>
+        <td colspan="4"></td>
+        <td>|-- vsm_posam</td>
+        <td></td>
+    </tr>
+   <tr>
+        <td colspan="5"></td>
+        <td>|-- lmr.pt</td>
+    </tr>
+</table>
+<p>*In Pre-Trained Embedding Model directory you get pre-Trained SOTA weights which you need to place while you running DIE on normal environment. On Docker environment you need not to do anything, everything is already set up in the image.
+</p>
+<p>
+**In Trained Weights directory you will get trained models on 2 SOTA embeddings & 6 DIE novel embeddings methods. You can use them for your usage.
+</p>
+
 <h3>INSTALLATION</h3>
 <h4>With Docker:</h4>
 <p>The best way to use DIE is with Docker, as with docker you get environment ready built without the worry of
     dependencies.</p>
 <p><i>install docker</i></p>
 <p><i>initialize docker</i></p>
-<p><i>docker pull die:version</i></p>
-<h3>Without Docker:</h3>
-<p>Create a virtual environment and install the requirements with pip. Here are the steps:</p>
-<p><i>pip install -r lmr_requirements.txt</i></p>
-<p><i>cd /project_dir/ python api_run.py</i></p>
+<p><i>docker pull gateid/die:(latest_version)</i></p>
+<p>*latest_version: See the
+    <a href="https://hub.docker.com/r/gateid/die/tags" target="_blank">DIE docker image</a> for details about latest version.</p>
+
+
+<h4>Without Docker:</h4>
+<p>Clone the project</p>
+<p><i>git clone https://github.com/amitsanger3/DeepInfoExtractor</i></p>
+<p>Go to the project directory</p>
+<p><i>cd DeepInfoExtractor</i></p>
+<p>Place all directories which is in 'Pre-Trained Embeddings Model' directory which you download from google drive.</p>
+<p><i>bert-base-multilingual-cased<br>
+  deberta-base<br>
+  pos_tagger</i></p>
+<p>Install dependencies</p>
+<p><i>pip install -r lmr_requirements.txt </i></p>
+<p>Open config.py file and change the 'API CONFIG' section as per the description</p>
+<p><i># ####################### API CONFIGS ######################################<br>
+# Change the  below location with the complete path of your loca dirs <br>
+# as mention below<br>
+<br>
+conell_files_dir = "/geoai/data/conll2003/"  # Path where your conll2003/dataset dir is placed<br>
+conell_train_file = "/geoai/data/conll2003/train.txt"  # Path where your conll2003/dataset train file is placed in conll2003 format<br>
+conell_valid_file = "/geoai/data/conll2003/dev.txt"  # Path where your conll2003/dataset validation file is placed in conll2003 format<br>
+conell_test_file = "/geoai/data/conll2003/test.txt"  # Path where your conll2003/dataset  test file is placed in conll2003 format<br>
+<br>
+model_path = "/geoai/TRAINED_MODEL/Conell/"  # Path where you want your trained model will be saved<br>
+logs_path = "/geoai/LOGS/Conell/"  # Path where you want your logs will be saved<br>
+# ##########################################################################
+</i></p>
+<p>Start the flask app</p>
+<p><i>python api_run.py</i></p>
+<p>Open your browser and enter the below domain</p>
+<p><i>https://your_system_local_ip:5000/main</i></p>
+<p>**e.g. : https://192.168.22.200:5000/main</p>
+<p>VOILA !!!
+<br>
+The GUI app is started. Now, do the training & predictions as shown in Demo above.</p>
+
+<h3>Acknowledgements</h3>
+
+ <p>- <a href="https://docs.docker.com/engine/" target="_blank">Docker Installation</a></p>
+ <p>- <a href="https://arxiv.org/abs/1810.04805" target="_blank">BERT</a></p>
+<p>- <a href="https://arxiv.org/abs/2006.03654" target="_blank">Deberta</a></p>
+
+
+<h3>Support</h3>
+
+<p>For support, email <i>amitsanger1988@gmail.com</i> or join
+    <a href="https://www.youtube.com/@AmitSangerdes" target="_blank">Youtube channel</a></p>
 
 
 </body>

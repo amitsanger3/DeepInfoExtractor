@@ -49,7 +49,6 @@ title = "NLP model without RNN with MultiAttention"
 # logs_path = "LOGS/Conell/"
 
 pos_dict_path = "data/pos/pos.json"
-geo_path = "/geoai/input.jsonl"
 faulty_op_path = "faulty/lmr_fault.txt"
 
 
@@ -57,11 +56,18 @@ test_data_stage = 2
 distance = False
 MULTI_EMBEDDING = True
 
-# API CONFIGS
-conell_files_dir = "/geoai/data/conll2003/"
-conell_train_file = "/geoai/data/conll2003/train.txt"
-conell_valid_file = "/geoai/data/conll2003/dev.txt"
-conell_test_file = "/geoai/data/conll2003/test.txt"
+# ####################### API CONFIGS ######################################
+# Change the  below location with the complete path of your loca dirs 
+# as mention below
+
+conell_files_dir = "/geoai/data/conll2003/"  # Path where your conll2003/dataset dir is placed
+conell_train_file = "/geoai/data/conll2003/train.txt"  # Path where your conll2003/dataset train file is placed in conll2003 format
+conell_valid_file = "/geoai/data/conll2003/dev.txt"  # Path where your conll2003/dataset validation file is placed in conll2003 format
+conell_test_file = "/geoai/data/conll2003/test.txt"  # Path where your conll2003/dataset  test file is placed in conll2003 format
+
+model_path = "/geoai/TRAINED_MODEL/Conell/"  # Path where you want your trained model will be saved
+logs_path = "/geoai/LOGS/Conell/"  # Path where you want your logs will be saved
+# ##########################################################################
 
 flair_dataloader_tensors_path = "data/gen"
 
@@ -74,6 +80,4 @@ api_log_file = "CSV/api_logs.txt"
 
 monitoring_file = "CSV/monitoring.json"
 
-model_path = "/geoai/TRAINED_MODEL/Conell/"
-# report_path = "/geoai/REPORT/Conell/"
-logs_path = "/geoai/LOGS/Conell/"
+

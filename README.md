@@ -11,6 +11,81 @@ Follow this YouTube video tutorial to successfully install & run DIE docker imag
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/R4Wa4ZNCD3M/0.jpg)](https://www.youtube.com/watch?v=R4Wa4ZNCD3M)
 
 
+## Download Dependencies & Trained Weights
+
+To run this project, you will need to download the DIE directory from the [google drive](https://drive.google.com/drive/folders/1I6idw9pASneTJ5BPyD0cq6nNZ3YxXQnC?usp=sharing).
+
+#### Structure of the DIE directory
+
+```bash
+  DIE 
+    |-- Pre-Trained Embedding Model
+        |-- bert-base-multilingual-cased
+        |-- deberta-base
+        |-- pos_tagger
+    |-- Trained Weights
+        |-- Conll2003_Location
+            |-- Conell
+                |-- bert
+                    |-- lmr.pt
+                |-- bert_posam
+                    |-- lmr.pt
+                |-- deberta
+                    |-- lmr.pt
+                |-- deberta_posam
+                    |-- lmr.pt
+                |-- mdm
+                    |-- lmr.pt
+                |-- mdm_posam
+                    |-- lmr.pt
+                |-- vsm
+                    |-- lmr.pt
+                |-- vsm_posam
+                    |-- lmr.pt
+        |-- Conll2003_Organisation
+            |-- Conell
+                |-- bert
+                    |-- lmr.pt
+                |-- bert_posam
+                    |-- lmr.pt
+                |-- deberta
+                    |-- lmr.pt
+                |-- deberta_posam
+                    |-- lmr.pt
+                |-- mdm
+                    |-- lmr.pt
+                |-- mdm_posam
+                    |-- lmr.pt
+                |-- vsm
+                    |-- lmr.pt
+                |-- vsm_posam
+                    |-- lmr.pt
+        |-- Conll2003_Person
+            |-- Conell
+                |-- bert
+                    |-- lmr.pt
+                |-- bert_posam
+                    |-- lmr.pt
+                |-- deberta
+                    |-- lmr.pt
+                |-- deberta_posam
+                    |-- lmr.pt
+                |-- mdm
+                    |-- lmr.pt
+                |-- mdm_posam
+                    |-- lmr.pt
+                |-- vsm
+                    |-- lmr.pt
+                |-- vsm_posam
+                    |-- lmr.pt
+
+```
+
+*In Pre-Trained Embedding Model directory you get pre-Trained SOTA weights which you need to place while you running DIE on normal environment. On Docker environment you need not to do anything, everything is already set up in the image.
+
+**In Trained Weights directory you will get trained models on 2 SOTA embeddings & 6 DIE novel embeddings methods. You can use them for your usage.
+
+
 ## Installation
 
 #### Install DIE with Docker
@@ -20,24 +95,76 @@ Follow this YouTube video tutorial to successfully install & run DIE docker imag
 ```
 *latest_version: See the [DIE docker image](https://hub.docker.com/r/gateid/die/tags) for details about latest version.
 
-#### Normal Installation
-
-** Install & initialize virtual environment as per you OS.
 ```bash
-  cd DIE
+  docker run -p 5000:5000 -v /shared_dir_path:/geoai die:(latest_version)
+```
+*shared_dir_path: complete path of the directory which you want to share with docker container. See demo video.
+
+**5000 is default port. Its suggested not to change this for easy use.
+
+    
+## Normal Installation
+
+Clone the project
+
+```bash
+  git clone https://github.com/amitsanger3/DeepInfoExtractor
+```
+
+Go to the project directory
+
+```bash
+  cd DeepInfoExtractor
+```
+
+Place all directories which is in 'Pre-Trained Embeddings Model' directory which you download from google drive. 
+
+```bash
+  bert-base-multilingual-cased
+  deberta-base
+  pos_tagger
+```
+
+Install dependencies
+
+```bash
   pip install -r lmr_requirements.txt 
+```
+
+Open config.py file and change the 'API CONFIG' section as per the description
+
+```bash
+# ####################### API CONFIGS ######################################
+# Change the  below location with the complete path of your loca dirs 
+# as mention below
+
+conell_files_dir = "/geoai/data/conll2003/"  # Path where your conll2003/dataset dir is placed
+conell_train_file = "/geoai/data/conll2003/train.txt"  # Path where your conll2003/dataset train file is placed in conll2003 format
+conell_valid_file = "/geoai/data/conll2003/dev.txt"  # Path where your conll2003/dataset validation file is placed in conll2003 format
+conell_test_file = "/geoai/data/conll2003/test.txt"  # Path where your conll2003/dataset  test file is placed in conll2003 format
+
+model_path = "/geoai/TRAINED_MODEL/Conell/"  # Path where you want your trained model will be saved
+logs_path = "/geoai/LOGS/Conell/"  # Path where you want your logs will be saved
+# ##########################################################################
+```
+
+Start the flask app
+
+```bash
   python api_run.py
 ```
 
+Open your browser and enter the below domain
 
-    
-## Environment Variables
+```bash
+  https://your_system_local_ip:5000/main
+```
+**e.g. : https://192.168.22.200:5000/main
 
-To run this project, you will need to add the following environment variables to your .env file
+VOILA !!!
 
-`API_KEY`
+The GUI app is started. Now, do the training & predictions as shown in Demo above.
 
-`ANOTHER_API_KEY`
 
 
 ## Authors
@@ -55,5 +182,8 @@ To run this project, you will need to add the following environment variables to
  - [Deberta](https://arxiv.org/abs/2006.03654)
 
 
+## Support
+
+For support, email amitsanger1988@gmail.com or join [Youtube channel](https://www.youtube.com/@AmitSangerdes).
 
 
