@@ -8,12 +8,21 @@ Deep Info Extractor (DIE) is an open-source tool that can extract useful informa
 
 Follow this YouTube video tutorial to successfully install & run DIE docker image.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/R4Wa4ZNCD3M/0.jpg)](https://www.youtube.com/watch?v=R4Wa4ZNCD3M)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sZRFoYydfc8/0.jpg)](https://www.youtube.com/watch?v=sZRFoYydfc8)
 
+NOTE: Inadvertently, the wrong pre-training weights are used in this demonstration. However, the correct weights can be used by following the same procedure. We will rectify this error in the future.
 
 ## Download Dependencies & Trained Weights
 
 To run this project, you will need to download the DIE directory from the [google drive](https://drive.google.com/drive/folders/1I6idw9pASneTJ5BPyD0cq6nNZ3YxXQnC?usp=sharing).
+
+To annonate your data this tutorial can help you. 
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CxfGJGK4mxQ/0.jpg)](https://www.youtube.com/watch?v=CxfGJGK4mxQ)
+
+(NOTE: This is an external service, application, and tutorial. We cannot guarantee the product's quality, origin, or any other product-specific characteristics. We do not endorse any of the products, add-ons, commercials, or other business-related content or monetary benefit that the owner of this video and software shows, displays, or offers. We're directing you to this video for assistance. It is entirely up to you to utilise this video information and any products displayed, promoted, sold, or offered. We are not responsible for any damage, loss, or harm caused by the information, products, offers, or anything else displayed, promoted, sold, or offered in this video.)
+
+
 
 #### Structure of the DIE directory
 
