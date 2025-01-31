@@ -3,6 +3,9 @@
 
 Deep Info Extractor (DIE) is an open-source tool that can extract useful information from micro text. Name Entity Recognition is an example of an information extraction task and DIE can extract such information but taking one task at a time, that is, tool can extract either name or entity, or location at a time. DIE tool can be trained on any labeled data that is in Conell 2003 format & provide 2 pre-trained & 6 novel pre-processing embedding methods to choose from. The tool can be used with or without docker. Docker helps you to relax from the environment variations.
 
+## Paper
+
+[Deep Information Extractor (DIE): A Multipurpose Information Extractor with Shifted Vectors Pre-processing](https://books.google.com/books?hl=en&lr=&id=I6Q4EQAAQBAJ&oi=fnd&pg=PA343&dq=deep+info+extractor&ots=ChF4BgavG_&sig=FOMa6lt2oRmXSBX0Njzblf_dg4c)
 
 ## Demo
 
@@ -183,6 +186,16 @@ The GUI app is started. Now, do the training & predictions as shown in Demo abov
 - Rohit Pandey
 - Yatin Tomer
 
+## Citation
+
+```http
+  @inproceedings{sharma2024deep,
+  title={Deep Information Extractor (DIE): A Multipurpose Information Extractor with Shifted Vectors Pre-processing},
+  author={Sharma, Raghav and Sanger, Amit and Tomer, Yatin and Pandey, Rohit},
+  booktitle={Proceedings of Ninth International Congress on Information and Communication Technology: ICICT 2024, London, Volume 10},
+  pages={343},
+  organization={Springer Nature}}
+```
 
 ## Acknowledgements
 
