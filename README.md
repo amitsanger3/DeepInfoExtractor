@@ -5,7 +5,7 @@ Deep Info Extractor (DIE) is an open-source tool that can extract useful informa
 
 ## Paper
 
-[Deep Information Extractor (DIE): A Multipurpose Information Extractor with Shifted Vectors Pre-processing](https://books.google.com/books?hl=en&lr=&id=I6Q4EQAAQBAJ&oi=fnd&pg=PA343&dq=deep+info+extractor&ots=ChF4BgavG_&sig=FOMa6lt2oRmXSBX0Njzblf_dg4c)
+[Deep Information Extractor (DIE): A Multipurpose Information Extractor with Shifted Vectors Pre-processing](https://link.springer.com/chapter/10.1007/978-981-97-5441-0_29)
 
 ## Demo
 
