@@ -11,7 +11,7 @@ Deep Info Extractor (DIE) is an open-source tool that can extract useful informa
 
 Follow this YouTube video tutorial to successfully install & run DIE docker image.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sZRFoYydfc8/0.jpg)](https://www.youtube.com/watch?v=R4Wa4ZNCD3M)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/R4Wa4ZNCD3M/0.jpg)](https://www.youtube.com/watch?v=R4Wa4ZNCD3M)
 
 NOTE: Inadvertently, the wrong pre-training weights are used in this demonstration. However, the correct weights can be used by following the same procedure. We will rectify this error in the future.
 
